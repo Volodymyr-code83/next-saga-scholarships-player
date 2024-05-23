@@ -1,0 +1,6 @@
+{
+  "/signin/page": "app/signin/page.js",
+  "/service-volun/page": "app/service-volun/page.js",
+  "/page": "app/page.js",
+  "/service-description/page": "app/service-description/page.js"
+}
