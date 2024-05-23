@@ -1,4 +1,4 @@
-// File: E:\@@@Bid Experience\sega_adminpanel\src\app\signin\page.tsx
+// File: D:\saga_next\next-saga-scholarships-player\src\app\signin\page.tsx
 import * as entry from '../../../../src/app/signin/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -1,4 +1,4 @@
-// File: E:\@@@Bid Experience\sega_adminpanel\src\app\user-queries\page.tsx
+// File: D:\saga_next\next-saga-scholarships-player\src\app\user-queries\page.tsx
 import * as entry from '../../../../src/app/user-queries/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
