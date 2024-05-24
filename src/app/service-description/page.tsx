@@ -247,12 +247,12 @@ const Page = () => {
   // }, [token]);
 
   return (
-    <div className="mx-auto flex w-full max-w-screen-xl flex-col items-start justify-start gap-[30px]">
-      <div className="mx-auto flex w-full max-w-screen-xl items-start justify-center gap-[120px]">
-        <button 
-          className="relative mx-auto flex h-full max-h-[588px] min-h-[588px] w-full max-w-[892px] items-center justify-center  rounded-[20px] bg-white"
+    <div className="mx-auto w-full max-w-screen-xl gap-[30px] p-4">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+  <button
+          className="relative flex h-auto min-h-[200px] w-full items-center justify-center rounded-[20px] bg-white"
           type="button"
-          onClick={() => handleEditImage1()}
+          onClick={() => handleEditImage2()}
         >
           {toDoData?.imageUrl1 && (
             <Image
@@ -260,45 +260,44 @@ const Page = () => {
               width={892}
               height={588}
               alt=""
-              className="h-full z-[2] max-h-[588px] w-full max-w-[892px] rounded-[20px] bg-cover bg-center"
+              className="h-auto w-full rounded-[20px] object-cover"
             />
           )}
-          <p className="absolute z-[1] text-lg font-medium leading-6 pb-[5px]">Upload profile picture here</p>
-          <div className="absolute z-[1] px-[10px] py-[10px] bg-blue rounded-[5px] mt-[80px]">
+          <p className="absolute z-[1] text-lg font-medium leading-6 pb-[5px]">Upload your profile picture here</p>
+          <div className="absolute px-[10px] z-[1] py-[10px] bg-blue rounded-[5px] mt-[80px]">
             <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M7.0835 8.33337C7.77385 8.33337 8.3335 7.77373 8.3335 7.08337C8.3335 6.39302 7.77385 5.83337 7.0835 5.83337C6.39314 5.83337 5.8335 6.39302 5.8335 7.08337C5.8335 7.77373 6.39314 8.33337 7.0835 8.33337Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.4998 12.5L13.3332 8.33337L4.1665 17.5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.0835 8.33337C7.77385 8.33337 8.3335 7.77373 8.3335 7.08337C8.3335 6.39302 7.77385 5.83337 7.0835 5.83337C6.39314 5.83337 5.8335 6.39302 5.8335 7.08337C5.8335 7.77373 6.39314 8.33337 7.0835 8.33337Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.4998 12.5L13.3332 8.33337L4.1665 17.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </div>
         </button>
-        
-        <button 
-          className="relative mx-auto flex h-full max-h-[588px] min-h-[588px] w-full max-w-[892px] items-center justify-center  rounded-[20px] bg-white"
+    <button
+          className="relative flex h-auto min-h-[200px] w-full items-center justify-center rounded-[20px] bg-white"
           type="button"
           onClick={() => handleEditImage2()}
         >
@@ -308,128 +307,132 @@ const Page = () => {
               width={892}
               height={588}
               alt=""
-              className="h-full z-[2] max-h-[588px] w-full max-w-[892px] rounded-[20px] bg-cover bg-center"
+              className="h-auto w-full rounded-[20px] object-cover"
             />
           )}
           <p className="absolute z-[1] text-lg font-medium leading-6 pb-[5px]">Upload your in-action picture here</p>
-          <div className="absolute z-[1] px-[10px] py-[10px] bg-blue rounded-[5px] mt-[80px]">
+          <div className="absolute px-[10px] z-[1] py-[10px] bg-blue rounded-[5px] mt-[80px]">
             <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M7.0835 8.33337C7.77385 8.33337 8.3335 7.77373 8.3335 7.08337C8.3335 6.39302 7.77385 5.83337 7.0835 5.83337C6.39314 5.83337 5.8335 6.39302 5.8335 7.08337C5.8335 7.77373 6.39314 8.33337 7.0835 8.33337Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.4998 12.5L13.3332 8.33337L4.1665 17.5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-          </div>  
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7.0835 8.33337C7.77385 8.33337 8.3335 7.77373 8.3335 7.08337C8.3335 6.39302 7.77385 5.83337 7.0835 5.83337C6.39314 5.83337 5.8335 6.39302 5.8335 7.08337C5.8335 7.77373 6.39314 8.33337 7.0835 8.33337Z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17.4998 12.5L13.3332 8.33337L4.1665 17.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+        </button>
+  </div>
+  <div className="flex flex-col md:flex-row w-full max-w-screen-xl items-start justify-between gap-5 mt-[30px]">
+    <div>
+      <div className="flex flex-col"> 
+        <p className="text-lg font-medium leading-6 pb-[10px]">Date of birth</p>
+        <div className="date-of-birth-container">
+          <h2 className="date-of-birth-header">Date of Birth</h2>
+          <div className="date-inputs flex gap-[10px]">
+            <input
+              type="number"
+              placeholder="Day"
+              min="1"
+              max="31"
+              value={toDoData?.day || ''}
+              onChange={handleDayChange}
+              className="rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none"
+            />
+            <input
+              type="number"
+              placeholder="Month"
+              min="1"
+              max="12"
+              value={toDoData?.month || ''}
+              onChange={handleMonthChange}
+              className="rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none"
+            />
+            <input
+              type="number"
+              placeholder="Year"
+              min="1900"
+              max="2024"
+              value={toDoData?.year || ''}
+              onChange={handleYearChange}
+              className="rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none"
+            />
+          </div>
+        </div> 
+      </div>
+      <div className="flex flex-col w-full gap-5 mt-[20px]">
+        <div className="w-full md:w-96">
+          <p className="text-lg font-medium leading-6 pb-[10px]">Preferred position</p>
+          <input
+            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none"
+            type="text"
+            name="preferredPosition"
+            id="preferredPosition"
+            value={toDoData?.preferredPosition}
+            onChange={handlePreferredPositionChange}
+            placeholder="Enter the position you prefer"
+          />
+        </div>
+        <div className="w-full md:w-96">
+          <p className="text-lg font-medium leading-6 pb-[10px]">Secondary preferred position</p>
+          <input
+            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none"
+            type="text"
+            name="secondaryPosition"
+            id="secondaryPosition"
+            value={toDoData?.secondaryPreferredPosition}
+            onChange={handleSecondaryPreferredPositionChange}
+            placeholder="Enter your secondary preferred position"
+          />
+        </div>
+      </div>
+    </div>
+    <div className="w-full md:w-[580px]">
+      <p className="text-lg font-medium leading-6 pb-[10px]">Upload your soccer resume (in words)</p>
+      <textarea
+        className="block w-full h-48 px-4 py-3 rounded-lg shadow-sm bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 resize-none"
+        placeholder="Enter your resume text here..."
+        value={toDoData?.resume}
+        onChange={handleResumeChange}
+        rows={6}
+      />
+      <div className="flex justify-end mt-[1rem]">
+        <button
+          type="submit"
+          className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          onClick={handleSave}
+        > Submit
         </button>
       </div>
-      <div className="flex w-full max-w-screen-xl items-start justify-between">
-        <div>
-          <div className="flex flex-col"> 
-            <p className="text-lg font-medium leading-6 pb-[10px] pt-[30px]">Date of birth</p>
-            <div className="date-of-birth-container">
-              <h2 className="date-of-birth-header">Date of Birth</h2>
-              <div className="date-inputs flex gap-[10px]">
-                <input
-                  type="number"
-                  placeholder="Day"
-                  min="1"
-                  max="31"
-                  value={toDoData?.day || ''}
-                  onChange={handleDayChange}
-                />
-                <input
-                  type="number"
-                  placeholder="Month"
-                  min="1"
-                  max="12"
-                  value={toDoData?.month || ''}
-                  onChange={handleMonthChange}
-                />
-                <input
-                  type="number"
-                  placeholder="Year"
-                  min="1900"
-                  max="2024"
-                  value={toDoData?.year || ''}
-                  onChange={handleYearChange}
-                />
-              </div>
-            </div> 
-          </div>
+    </div>
+  </div>
 
-          <div className="flex flex-col justify-between w-full gap-5 mb-[10px]">
-            <div className="w-96">
-            <p className="text-lg font-medium leading-6 pb-[10px] pt-[20px]">Preferred position</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="preferredPosition"
-              id="preferredPosition"
-              value={toDoData?.preferredPosition}
-              onChange={handlePreferredPositionChange}
-              placeholder="Enter the position you prefer"
-            />
-            </div>
-            <div className="w-96">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Secondary preferred position</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="secondaryPosition"
-              id="secondaryPosition"
-              value={toDoData?.secondaryPreferredPosition}
-              onChange={handleSecondaryPreferredPositionChange}
-              placeholder="Enter your secondary preferred position you prefer"
-            />
-            </div>
-          </div>
-        </div>
 
-        <div className="w-[580px]">
-          <p className="text-lg font-medium leading-6 pb-[10px] pt-[30px]">Upload your soccer resume(in words)</p>
-          <textarea
-            className="block w-full h-48 px-4 py-3 rounded-lg shadow-sm bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500 resize-none"
-            placeholder="Enter your resume text here..."
-            value={toDoData?.resume}
-            onChange={handleResumeChange}
-            rows={6}
-          />
-          <div className="flex justify-end mt-[1rem]">
-            <button
-              type="submit"
-              className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              onClick={handleSave}
-            > Submit
-            </button>
-          </div>
-        </div>
 
         
 
-      </div>
+      
       {/* <div className="flex w-full items-center justify-end gap-5">
           <button
             className="rounded bg-blue px-4 py-2 text-[13px] uppercase leading-[13px] text-white shadow outline-none transition-all duration-150 ease-linear hover:shadow-md focus:outline-none active:bg-blue"

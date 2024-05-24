@@ -254,182 +254,181 @@ const Page = () => {
 
   return (
     <>
-      <div className="flex w-full max-w-[2000px] rounded-[10px] gap-[50px]">
-        <div className="flex-5 flex-col w-full">
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Your Youtube highlight vido link</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="youtubeHighlightVideoLink"
-              id="youtubeHighlightVideoLink"
-              value={toDoData1?.youtubeHighlightVideoLink}
-              onChange={handleYoutubeHighlightVideoLinkChange}
-
-              placeholder="Should only be a link"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload transcipts</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="transcripts"
-              id="transcripts"
-              onChange={handleInputChange}
-              // value={toDoData1.transcripts ? toDoData1.transcripts.name : ""}
-              placeholder="Upload PDF file"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Spantran reference number</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="spantranReferenceNum"
-              id="spantranReferenceNum"
-              value={toDoData1.spantranReferenceNum}
-              onChange={handleSpantranReferenceNumChange}
-              placeholder="Should be in numbers"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">NCAA ID number</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="ncaaIdNum"
-              id="ncaaIdNum"
-              value={toDoData1?.ncaaIdNum}
-              onChange={handleNcaaIdNumChange}
-              placeholder="Should be in numbers"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload PDF of NCAA final report</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="ncaaFinalReport"
-              id="ncaaFinalReport"
-              onChange={handleInputChange}
-              placeholder="Upload PDF file"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload Duolingo certificate PDF</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="duolingoCertificate"
-              id="duolingoCertificate"
-              onChange={handleInputChange}
-              placeholder="Should be in a PDF format"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload SAT score certificate PDF</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="satScoreCertificate"
-              id="satScoreCertificate"
-              onChange={handleInputChange}
-              placeholder="Should be in a PDF format"
-            />
-          </div>
-        </div>
-
-        <div className="flex-5 w-full">
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Your full game Youtube link</p>
-            <input
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              type="text"
-              name="gameYoutubeLink"
-              id="gameYoutubeLink"
-              value={toDoData1.gameYoutubeLink}
-              onChange={handleGameYoutubeLinkChange}
-              placeholder="Should only be a link"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload translated PDF</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="translated"
-              id="translated"
-              onChange={handleInputChange}
-              placeholder="Upload PDF file"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload Final Spantran report PDF</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="finalSpantranReport"
-              id="finalSpantranReport"
-              onChange={handleInputChange}
-              placeholder="Upload PDF file"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload TOEFL score certificate PDF</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="toeflScoreCertificate"
-              id="toeflScoreCertificate"
-              onChange={handleInputChange}
-              placeholder="Upload PDF file"
-            />
-          </div>
-
-          <div className="w-full mb-[50px]">
-            <p className="text-lg font-medium leading-6 pb-[10px]">Upload a PDF of 1-20</p>
-            <input
-              type="file"
-              accept=".pdf"
-              className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-              name="oneTwenty"
-              id="oneTwenty"
-              onChange={handleInputChange}
-              placeholder="Upload PDF file"
-            />
-          </div>
-          <div className="flex justify-end mt-[1rem]">
-            <button
-              type="submit"
-              className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              onClick={handleSubmit}
-            > Submit
-            </button>
-        </div>
-        </div>
+  <div className="grid w-full max-w-[2000px] gap-[50px] md:grid-cols-2">
+    <div className="w-full">
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Your Youtube highlight video link</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          type="text"
+          name="youtubeHighlightVideoLink"
+          id="youtubeHighlightVideoLink"
+          value={toDoData1?.youtubeHighlightVideoLink}
+          onChange={handleYoutubeHighlightVideoLinkChange}
+          placeholder="Should only be a link"
+        />
       </div>
-      {isSaving && (
-        <Notification message={message} progress={progress} success={success} />
-      )}
-    </>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload transcripts</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="transcripts"
+          id="transcripts"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Spantran reference number</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          type="text"
+          name="spantranReferenceNum"
+          id="spantranReferenceNum"
+          value={toDoData1.spantranReferenceNum}
+          onChange={handleSpantranReferenceNumChange}
+          placeholder="Should be in numbers"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">NCAA ID number</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          type="text"
+          name="ncaaIdNum"
+          id="ncaaIdNum"
+          value={toDoData1?.ncaaIdNum}
+          onChange={handleNcaaIdNumChange}
+          placeholder="Should be in numbers"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload PDF of NCAA final report</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="ncaaFinalReport"
+          id="ncaaFinalReport"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload Duolingo certificate PDF</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="duolingoCertificate"
+          id="duolingoCertificate"
+          onChange={handleInputChange}
+          placeholder="Should be in a PDF format"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload SAT score certificate PDF</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="satScoreCertificate"
+          id="satScoreCertificate"
+          onChange={handleInputChange}
+          placeholder="Should be in a PDF format"
+        />
+      </div>
+    </div>
+
+    <div className="w-full">
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Your full game Youtube link</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          type="text"
+          name="gameYoutubeLink"
+          id="gameYoutubeLink"
+          value={toDoData1.gameYoutubeLink}
+          onChange={handleGameYoutubeLinkChange}
+          placeholder="Should only be a link"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload translated PDF</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="translated"
+          id="translated"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload Final Spantran report PDF</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="finalSpantranReport"
+          id="finalSpantranReport"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload TOEFL score certificate PDF</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="toeflScoreCertificate"
+          id="toeflScoreCertificate"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+
+      <div className="w-full mb-[50px]">
+        <p className="text-lg font-medium leading-6 pb-[10px]">Upload a PDF of 1-20</p>
+        <input
+          type="file"
+          accept=".pdf"
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
+          name="oneTwenty"
+          id="oneTwenty"
+          onChange={handleInputChange}
+          placeholder="Upload PDF file"
+        />
+      </div>
+      <div className="flex justify-end mt-[1rem]">
+        <button
+          type="submit"
+          className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </div>
+  {isSaving && (
+    <Notification message={message} progress={progress} success={success} />
+  )}
+</>
+
   );
 };
 

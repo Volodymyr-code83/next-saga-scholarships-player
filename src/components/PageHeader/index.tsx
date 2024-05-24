@@ -258,11 +258,12 @@ const PageHeader = () => {
 
   return (
     <>
-      <div className="flex w-full max-w-[2000px] gap-20">
-        <div className="flex-7 w-full">
-          <div className="flex w-full items-center justify-start rounded-[10px] bg-white" style={{width:'800px'}}>
-          <button 
-          className="relative mx-auto flex h-full max-h-[506px] min-h-[506px] w-full max-w-[892px] items-center justify-center  rounded-[10px] bg-[#AFAFAF]"
+      <div className="max-w-[2000px] mx-auto p-5">
+  <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-[1fr,auto,auto] gap-5">
+    <div className="col-span-1 sm:col-span-1 md:col-span-2 2xl:col-span-2">
+      <div className="bg-white grid grid-cols-1 md:grid-cols-2 rounded-[10px]">
+      <button
+          className="relative flex h-auto min-h-[200px] w-full items-center justify-center rounded-[20px] bg-white"
           type="button"
           onClick={() => handleEditImage()}
         >
@@ -272,235 +273,192 @@ const PageHeader = () => {
               width={892}
               height={588}
               alt=""
-              className="h-full z-[2] h-[800px] max-h-[506px] w-full max-w-[892px] bg-cover bg-center"
+              className="h-auto w-full rounded-[10px] object-cover"
             />
-          )} 
-          <p className="absolute z-[1] text-lg font-medium leading-6 pb-[5px]">Upload your selfie here</p>
-          <div className="absolute z-[1] px-[10px] py-[10px] bg-blue rounded-[5px] mt-[80px]">
-            <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M7.0835 8.33337C7.77385 8.33337 8.3335 7.77373 8.3335 7.08337C8.3335 6.39302 7.77385 5.83337 7.0835 5.83337C6.39314 5.83337 5.8335 6.39302 5.8335 7.08337C5.8335 7.77373 6.39314 8.33337 7.0835 8.33337Z"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.4998 12.5L13.3332 8.33337L4.1665 17.5"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-          </div>
-          </button>
-            <div className="flex flex-col w-full items-center">
-              <div className="flex flex-col justify-between gap-[100px]">
-                <div>
-                  <h2 className="text-center font-bold text-2xl">Player information</h2>
-                </div>
-                <div>
-                  <label className="text-lg font-medium leading-6 pb-[5px]">DOB: 2021</label>
-
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Position: CB,RWB</p>
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Pursuing College enrollment</p>
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Sport: Football</p>
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Desired Major: Mechanical Eng.</p>
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Home Town: Washington DC</p>
-                  <p className="text-lg font-medium leading-6 pb-[5px]">Home Club: DC United</p>
-                </div>
-              </div> 
-            </div>
+          )}
+          <p className="absolute z-10 text-lg font-medium leading-6 bottom-0 px-4 py-2 bg-blue rounded-lg mb-10">Upload your selfie here</p>
+        </button>
+        <div className="p-5 md:col-span-1 flex flex-col justify-center items-center">
+          <h2 className="text-center font-bold md:text-3xl">Player information</h2>
+          <div className="mt-5 space-y-2 mt-[2rem]">
+            <p className="md:text-xl font-medium leading-6">DOB: 2021</p>
+            <p className="md:text-xl font-medium leading-6">Position: CB,RWB</p>
+            <p className="md:text-xl font-medium leading-6">Pursuing College enrollment</p>
+            <p className="md:text-xl font-medium leading-6">Sport: Football</p>
+            <p className="md:text-xl font-medium leading-6">Desired Major: Mechanical Eng.</p>
+            <p className="md:text-xl font-medium leading-6">Home Town: Washington DC</p>
+            <p className="md:text-xl font-medium leading-6">Home Club: DC United</p>
           </div>
         </div>
-        <div className="flex-3 w-full">
-          <div className="flex flex-col gap-5 rounded-[10px] bg-white px-9 pb-9 pt-5 h-[506px]">
+      </div>
+    </div>
+   
+          <div className="flex flex-col gap-1 rounded-[10px] bg-white px-5 pb-5 pt-5">
             <div className="pt-[20px] pb-[30px]">
               <h2 className="text-center font-bold text-2xl">Tasks analystics</h2>
             </div>
-            <div className="flex flex-col justfy-center items-center">
+            <div className="flex flex-col justfy-center items-center ">
               <Chart progress={progressNum} thickness={10} />
             </div>
-            <div className="flex w-full justify-between mt-[60px]">
-              <div className="flex gap-[5px]">
-                <label htmlFor="completedNum" className="font-bold">Completed:</label>
-                <input 
-                  type="text" 
-                  id="completedNum" 
-                  name="completedNum"
-                  value={pageData?.completedNum1}
-                  onChange={handleCompletedNumChange}
-                  className="border border-gray-300 rounded-md px-[1px] w-[40px]"
-                  placeholder="NUM"
-                />        
-              </div>      
-              <div className="flex gap-[5px]">
-                <label htmlFor="acceptedNum" className="font-bold">Accepted:</label>
-                <input 
-                  type="text" 
-                  id="acceptedNum" 
-                  name="acceptedNum" 
-                  value={pageData?.acceptedNum1}
-                  onChange={handleAcceptedNumChange}
-                  className="border border-gray-300 rounded-md px-[1px] w-[40px]"
-                  placeholder="NUM"
-                />        
-              </div>
-            </div>
-            <div className="flex w-full justify-between">
-              <div className="flex gap-[5px]">
-                <label htmlFor="pendingNum" className="font-bold ml-[22px]">Pending:</label>
-                <input 
-                  type="text" 
-                  id="pendingNum" 
-                  name="pendingNum" 
-                  value={pageData?.pendingNum1}
-                  onChange={handlePendingNumChange}
-                  className="border border-gray-300 rounded-md px-[1px] w-[40px]"
-                  placeholder="NUM"
-                />        
-              </div>
-              <div className="flex gap-[5px]">
-                <label htmlFor="RejectedNum" className="font-bold">Rejected:</label>
-                <input 
-                  type="text" 
-                  id="RejectedNum" 
-                  name="RejectedNum" 
-                  value={pageData?.rejectedNum1}
-                  onChange={handleRejectedNumChange}
-                  className="border border-gray-300 rounded-md px-[1px] w-[40px]"
-                  placeholder="NUM"
-                />        
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="mt-5 space-y-3">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="flex items-center justify-between gap-[20px]">
+      <label htmlFor="completedNum" className="font-bold">Completed:</label>
+      <input 
+        type="text" 
+        id="completedNum" 
+        name="completedNum" 
+        value={pageData?.completedNum1} 
+        onChange={handleCompletedNumChange}
+        className="border border-gray-300 rounded-md px-2 w-16"
+        placeholder="NUM"
+      />
     </div>
-    <div className="flex flex-col w-full max-w-[2000px] gap-5">
-      <div>
-        <h2 className="font-bold text-2xl">Other information</h2>
-      </div>
-      <div className="flex justify-between w-full gap-5 mb-[10px]">
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">Preferred position</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="preferredPosition"
-            id="preferredPosition"
-            value={pageData?.preferredPosition1}
-            onChange={handlePreferredPositionChange}
-            placeholder="Center Back(CB)"
-          />
-        </div>
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">Secondary preferred position</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="secondaryPosition"
-            id="secondaryPosition"
-            value={pageData?.secondaryPosition1}
-            onChange={handleSecondaryPositionChange}
-            placeholder="Right Wing Back(RWB)"
-          />
-        </div>
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">WES or Spantran reference number</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="wsRefNumber"
-            id="wsRefNumber"
-            value={pageData?.wsRefNumber1}
-            onChange={handleWsRefNumberChange}
-            placeholder="Should be in numbers"
-          />
-        </div>
-      </div>
-      <div className="flex w-full gap-[150px] mb-[10px]">
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">Your Youtube highlight video link</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="youtubeVideoLink"
-            id="youtubeVideoLink"
-            value={pageData?.youtubeVideoLink1}
-            onChange={handleYoutubeVideoLinkChange}
-            placeholder="Should only be a link"
-          />
-        </div>
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">NCAA ID number</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="ncaaNumber"
-            id="ncaaNumber"
-            value={pageData?.ncaaNumber1}
-            onChange={handleNcaaNumberChange}
-            placeholder="Should be in numbers"
-          />
-        </div>
-      </div>
-      <div className="flex justify-between w-full gap-5 mb-[10px]">
-        <div className="w-96">
-          <p className="text-lg font-medium leading-6 pb-[10px]">You full game Youtube link</p>
-          <input
-            className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-[8px] text-[#131E42] focus:border-primary focus-visible:outline-none dark:border-strokedark dark:bg-meta-4 dark:text-white dark:focus:border-primary"
-            type="text"
-            name="gameLink"
-            id="gameLink"
-            value={pageData?.gameLink1}
-            onChange={handleGameLinkChange}
-            placeholder="Should only be a link"
-          />
-        </div>
-      </div>
-      <div className="flex justify-end mt-[1rem]">
-            <button
-              type="submit"
-              className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              onClick={handleSubmit}
-            > Submit
-            </button>
-      </div>
+    <div className="flex items-center justify-between">
+      <label htmlFor="acceptedNum" className="font-bold">Accepted:</label>
+      <input 
+        type="text" 
+        id="acceptedNum" 
+        name="acceptedNum" 
+        value={pageData?.acceptedNum1} 
+        onChange={handleAcceptedNumChange}
+        className="border border-gray-300 rounded-md px-2 w-16"
+        placeholder="NUM"
+      />
     </div>
-    
+    <div className="flex items-center justify-between">
+      <label htmlFor="pendingNum" className="font-bold">Pending:</label>
+      <input 
+        type="text" 
+        id="pendingNum" 
+        name="pendingNum" 
+        value={pageData?.pendingNum1} 
+        onChange={handlePendingNumChange}
+        className="border border-gray-300 rounded-md px-2 w-16"
+        placeholder="NUM"
+      />
+    </div>
+    <div className="flex items-center justify-between">
+      <label htmlFor="rejectedNum" className="font-bold">Rejected:</label>
+      <input 
+        type="text" 
+        id="rejectedNum" 
+        name="rejectedNum" 
+        value={pageData?.rejectedNum1} 
+        onChange={handleRejectedNumChange}
+        className="border border-gray-300 rounded-md px-2 w-16"
+        placeholder="NUM"
+      />
+    </div>
+  </div>
+</div>
 
-      
-        {/* <PageHeaderModal
-          isOpen={isModalOpened}
-          data={pageHeaderData}
-          onClose={() => setIsModalOpened(false)}
-          onSubmit={handleSubmit}
-        /> */}
-        {isOpenedEditImageModal && (
-        <ServiceDescImageModal
-          isOpen={isOpenedEditImageModal}
-          onClose={handleCloseImage}
-          imageUrl={pageData?.imageUrl}
-          onSubmit={handleSubmitImage}
+
+    </div>
+  </div>
+  <div className="mt-10 space-y-5">
+    <div>
+      <h2 className="font-bold text-2xl">Other information</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div>
+        <p className="text-lg font-medium leading-6 pb-2">Preferred position</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+          type="text"
+          name="preferredPosition"
+          id="preferredPosition"
+          value={pageData?.preferredPosition1}
+          onChange={handlePreferredPositionChange}
+          placeholder="Center Back(CB)"
         />
-      )}
-      {isSaving && (
-        <Notification message={message} progress={progress} success={success} />
-      )}
+      </div>
+      <div>
+        <p className="text-lg font-medium leading-6 pb-2">Secondary preferred position</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+          type="text"
+          name="secondaryPosition"
+          id="secondaryPosition"
+          value={pageData?.secondaryPosition1}
+          onChange={handleSecondaryPositionChange}
+          placeholder="Right Wing Back(RWB)"
+        />
+      </div>
+      <div>
+        <p className="text-lg font-medium leading-6 pb-2">WES or Spantran reference number</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+          type="text"
+          name="wsRefNumber"
+          id="wsRefNumber"
+          value={pageData?.wsRefNumber1}
+          onChange={handleWsRefNumberChange}
+          placeholder="Should be in numbers"
+        />
+      </div>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
+        <p className="text-lg font-medium leading-6 pb-2">Your Youtube video link</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+          type="text"
+          name="youtubeVideoLink"
+          id="youtubeVideoLink"
+          value={pageData?.youtubeVideoLink1}
+          onChange={handleYoutubeVideoLinkChange}
+          placeholder="Should only be a link"
+        />
+      </div>
+      <div>
+        <p className="text-lg font-medium leading-6 pb-2">NCAA ID number</p>
+        <input
+          className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+          type="text"
+          name="ncaaNumber"
+          id="ncaaNumber"
+          value={pageData?.ncaaNumber1}
+          onChange={handleNcaaNumberChange}
+          placeholder="Should be in numbers"
+        />
+      </div>
+    </div>
+    <div>
+      <p className="text-lg font-medium leading-6 pb-2">Your full game Youtube link</p>
+      <input
+        className="w-full rounded-[10px] border border-[#AFAFAF] bg-[#F2F2F2] px-2 py-2"
+        type="text"
+        name="gameLink"
+        id="gameLink"
+        value={pageData?.gameLink1}
+        onChange={handleGameLinkChange}
+        placeholder="Should only be a link"
+      />
+    </div>
+    <div className="flex justify-end mt-5">
+      <button
+        type="submit"
+        className="bg-indigo-700 hover:bg-indigo-800 text-white font-semibold py-2 px-4 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+        onClick={handleSubmit}
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+  {isOpenedEditImageModal && (
+    <ServiceDescImageModal
+      isOpen={isOpenedEditImageModal}
+      onClose={handleCloseImage}
+      imageUrl={pageData?.imageUrl}
+      onSubmit={handleSubmitImage}
+    />
+  )}
+  {isSaving && (
+    <Notification message={message} progress={progress} success={success} />
+  )}
+</div>
+
     </>
   );
 };
